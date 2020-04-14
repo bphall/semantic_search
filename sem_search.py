@@ -1,4 +1,4 @@
-from functions import semantic_search
+from sem_functions import semantic_search
 import streamlit as st
 
 st.title('SEMANTIC SEARCH')

@@ -10,18 +10,24 @@ import os
 
 nltk.download('stopwords')
 stop_set = set(stopwords.words('english'))
-# third_model = pickle.load(open("third_model", "rb"))
-paragraphs = pickle.load(open("models/paragraphs_dataframe", "rb"))
+
 
 
 # client = boto3.client('s3')
 # response = client.get_object(Bucket='braytonhall-public', Key='semanticsearchmodels/third_model')
 
-# if not os.path.exists('s3model'):
-#     response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/third_model', stream=True)
-#     with open('s3model', 'wb') as f:
-#         f.write(response.content)
+if not os.path.exists('models/fourth_model.pkl'):
+    response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/fourth_model.pkl', stream=True)
+    with open('models/fourth_model.pkl', 'wb') as f:
+        f.write(response.content)
 
+if not os.path.exists('models/paragraphs_dataframe'):
+    response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/paragraphs_dataframe', stream=True)
+    with open('models/paragraphs_dataframe', 'wb') as f:
+        f.write(response.content)
+
+
+paragraphs = pickle.load(open("models/paragraphs_dataframe", "rb"))
 third_model = pickle.load(open('models/fourth_model.pkl', 'rb'))
 
 
