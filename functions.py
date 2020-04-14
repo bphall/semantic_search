@@ -1,25 +1,28 @@
 from nltk import RegexpTokenizer
 from nltk.corpus import stopwords
+import nltk
 import pickle
 import streamlit as st
 import requests
 import os
 # import boto3
 
+
+nltk.download('stopwords')
 stop_set = set(stopwords.words('english'))
 # third_model = pickle.load(open("third_model", "rb"))
-paragraphs = pickle.load(open("paragraphs_dataframe", "rb"))
+paragraphs = pickle.load(open("models/paragraphs_dataframe", "rb"))
 
 
 # client = boto3.client('s3')
 # response = client.get_object(Bucket='braytonhall-public', Key='semanticsearchmodels/third_model')
 
-if not os.path.exists('s3model'):
-    response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/third_model', stream=True)
-    with open('s3model', 'wb') as f:
-        f.write(response.content)
+# if not os.path.exists('s3model'):
+#     response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/third_model', stream=True)
+#     with open('s3model', 'wb') as f:
+#         f.write(response.content)
 
-third_model = pickle.load(open('s3model', 'rb'))
+third_model = pickle.load(open('models/fourth_model.pkl', 'rb'))
 
 
 def model_tokenizer(input_data):

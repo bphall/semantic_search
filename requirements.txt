@@ -5,11 +5,14 @@
 #    pip-compile
 #
 altair==4.1.0             # via streamlit
+appdirs==1.4.3            # via black
 appnope==0.1.0            # via ipykernel, ipython
 astor==0.8.1              # via streamlit
-attrs==19.3.0             # via jsonschema
+attrs==19.3.0             # via black, jsonschema
 backcall==0.1.0           # via ipython
 base58==2.0.0             # via streamlit
+black==19.10b0            # via blackcellmagic
+blackcellmagic==0.0.2     # via -r requirements.in
 bleach==3.1.4             # via nbconvert
 blinker==1.4              # via streamlit
 boto3==1.12.39            # via -r requirements.in, smart-open, streamlit
@@ -18,7 +21,7 @@ botocore==1.15.39         # via boto3, s3transfer, streamlit
 cachetools==4.1.0         # via streamlit
 certifi==2020.4.5.1       # via requests
 chardet==3.0.4            # via requests
-click==7.1.1              # via nltk, streamlit
+click==7.1.1              # via black, nltk, streamlit
 decorator==4.4.2          # via ipython, traitlets, validators
 defusedxml==0.6.0         # via nbconvert
 docutils==0.15.2          # via botocore
@@ -30,7 +33,7 @@ idna==2.9                 # via requests
 importlib-metadata==1.6.0  # via jsonschema
 ipykernel==5.2.0          # via ipywidgets, notebook, pydeck
 ipython-genutils==0.2.0   # via nbformat, notebook, traitlets
-ipython==7.13.0           # via ipykernel, ipywidgets
+ipython==7.13.0           # via blackcellmagic, ipykernel, ipywidgets
 ipywidgets==7.5.1         # via pydeck
 jedi==0.16.0              # via ipython
 jinja2==2.11.2            # via altair, nbconvert, notebook, pydeck
@@ -50,6 +53,7 @@ packaging==20.3           # via streamlit
 pandas==1.0.3             # via -r requirements.in, altair, streamlit
 pandocfilters==1.4.2      # via nbconvert
 parso==0.7.0              # via jedi
+pathspec==0.8.0           # via black
 pathtools==0.1.2          # via watchdog
 pexpect==4.8.0            # via ipython
 pickleshare==0.7.5        # via ipython
@@ -65,7 +69,7 @@ pyrsistent==0.16.0        # via jsonschema
 python-dateutil==2.8.1    # via botocore, jupyter-client, pandas, streamlit
 pytz==2019.3              # via pandas, tzlocal
 pyzmq==19.0.0             # via jupyter-client, notebook
-regex==2020.4.4           # via nltk
+regex==2020.4.4           # via black, nltk
 requests==2.23.0          # via -r requirements.in, smart-open, streamlit
 s3transfer==0.3.3         # via boto3
 scipy==1.4.1              # via gensim
@@ -75,11 +79,12 @@ smart-open==1.11.1        # via gensim
 streamlit==0.57.3         # via -r requirements.in
 terminado==0.8.3          # via notebook
 testpath==0.4.4           # via nbconvert
-toml==0.10.0              # via streamlit
+toml==0.10.0              # via black, streamlit
 toolz==0.10.0             # via altair
 tornado==5.1.1            # via ipykernel, jupyter-client, notebook, streamlit, terminado
 tqdm==4.45.0              # via nltk
 traitlets==4.3.3          # via ipykernel, ipython, ipywidgets, jupyter-client, jupyter-core, nbconvert, nbformat, notebook, pydeck
+typed-ast==1.4.1          # via black
 tzlocal==2.0.0            # via streamlit
 urllib3==1.25.8           # via botocore, requests
 validators==0.14.3        # via streamlit
