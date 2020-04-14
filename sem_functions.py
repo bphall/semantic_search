@@ -5,21 +5,17 @@ import pickle
 import streamlit as st
 import requests
 import os
-# import boto3
 
 
 nltk.download('stopwords')
 stop_set = set(stopwords.words('english'))
 
 
-
-# client = boto3.client('s3')
-# response = client.get_object(Bucket='braytonhall-public', Key='semanticsearchmodels/third_model')
-
 if not os.path.exists('models/fourth_model.pkl'):
     response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/fourth_model.pkl', stream=True)
     with open('models/fourth_model.pkl', 'wb') as f:
         f.write(response.content)
+
 
 if not os.path.exists('models/paragraphs_dataframe'):
     response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/paragraphs_dataframe', stream=True)
