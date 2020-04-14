@@ -9,3 +9,5 @@ RUN pip install -r requirements.txt
 COPY . .
 
 RUN mkdir models
+
+CMD ["bash","/project/config/entrypoint.sh"]
