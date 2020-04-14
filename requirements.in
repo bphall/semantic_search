@@ -1,0 +1,6 @@
+boto3
+nltk
+pandas
+streamlit
+requests
+gensim
