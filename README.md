@@ -1,3 +1,2 @@
 # Presentation
-![presentation](purpose.pdf)
-
+[PDF in Repository](../finalsem.pdf)
