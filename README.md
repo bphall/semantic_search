@@ -1,2 +1,2 @@
 # Presentation
-[PDF in Repository](../finalsem.pdf)
+[PDF in Repository](../blob/master/finalsem.pdffinalsem.pdf)
