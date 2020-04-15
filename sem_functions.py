@@ -18,7 +18,7 @@ if not os.path.exists('models/fourth_model.pkl'):
 
 
 if not os.path.exists('models/paragraphs_dataframe'):
-    response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/paragraphs_dataframe', stream=True)
+    response = requests.get('https://braytonhall-public.s3.amazonaws.com/semanticsearchmodels/paragraphs_dataframe2', stream=True)
     with open('models/paragraphs_dataframe', 'wb') as f:
         f.write(response.content)
 
