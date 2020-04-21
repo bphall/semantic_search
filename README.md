@@ -16,10 +16,13 @@ My aim was to build a specialized semantic search engine, which can return the m
 The data  includes 100 of the top 'free ebooks' from Project Gutenberg, scraped with BeautifulSoup. It contains approximately 12 million words, cleaned and tokenized, and approximately 57,000 paragraphs, each 12,000 characters long. Engineered features in Pandas include 'lexicon' or unique word count, and 'lexicon ratio', a marker of literary uniqueness for identifying more difficult prose or 'wordiness'. 
 
 ## EDA <a name='eda'></a>
+### ![novels](eda.png)
+The above is general info about the novels collected.
 ### ![source](lit_eda.png)
 The above graphic shows the sweet spot in the data of books with high (>5%) lexicon ratios which are also longer than 100,000 words, identifying a 'literary' subsection of prototypical difficult or wordy English novels, such as Ulysses and Moby Dick. 
 
 ## Doc2Vec Model <a name='model'></a>
+### ![word2vec](word.png)
 ### Tagging
 Just like Word2Vec, Doc2Vec creates vector representations of words. Doc2Vec also creates vector representations of documents, which are paragraphs here (I arbitrarily decided 1200 characters  == 1 paragraph). In order for Doc2Vec to vectorize tokenized docs, each doc (paragraph) must be 'Tagged'. For example, the first paragraph of Anna Karenina: 
 
@@ -42,7 +45,7 @@ The following is an example of how the search function can be used locally in a 
 
 ## Front End on Heroku <a name='frontend'></a>
 Deployed using a Docker container. 
-
+### ![frontend](frontend.png)
 Can be accessed at https://limitless-plains-12586.herokuapp.com/
  
 
