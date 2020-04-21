@@ -16,10 +16,10 @@ My aim was to build a specialized semantic search engine, which can return the m
 The data  includes 100 of the top 'free ebooks' from Project Gutenberg, scraped with BeautifulSoup. It contains approximately 12 million words, cleaned and tokenized, and approximately 57,000 paragraphs, each 12,000 characters long. Engineered features in Pandas include 'lexicon' or unique word count, and 'lexicon ratio', a marker of literary uniqueness for identifying more difficult prose or 'wordiness'. 
 
 ## EDA <a name='eda'></a>
+The following shows general info about the novels collected.
 ### ![novels](eda.png)
-The above is general info about the novels collected.
+The following graphic shows the sweet spot in the data of books with high (>5%) lexicon ratios which are also longer than 100,000 words, identifying a 'literary' subsection of prototypical difficult or wordy English novels, such as Ulysses and Moby Dick. 
 ### ![source](lit_eda.png)
-The above graphic shows the sweet spot in the data of books with high (>5%) lexicon ratios which are also longer than 100,000 words, identifying a 'literary' subsection of prototypical difficult or wordy English novels, such as Ulysses and Moby Dick. 
 
 ## Doc2Vec Model <a name='model'></a>
 ### ![word2vec](word.png)
