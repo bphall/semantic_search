@@ -1,7 +1,7 @@
 # Semantic Search
 [Presentation in Repository](https://github.com/bphall/semantic_search/blob/master/finalsem.pdf)
-### Introduction
-by Brayton Hall
+
+## by Brayton Hall
 
 - [Data](#data)
 - [EDA](#eda)
